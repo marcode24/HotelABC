@@ -1,0 +1,63 @@
+Create database HotelABC
+GO
+Use HotelABC
+GO
+CREATE TABLE tbHabitacion(
+	idHabitacion int primary key identity(1,1),
+	nombre varchar(50) not null,
+	capacidad int not null,
+	precio money not null,
+	cama varchar(50) not null,
+	cantidadCamas int default(1),
+	tamanioHabitacion bigint not null,
+	descripcion varchar(max),
+	numeroHabitacion int not null,
+	disponible bit not null,
+	foto varbinary(max)
+)
+
+CREATE TABLE tbReservacion(
+	idReservacion int primary key identity(1, 1),
+	nombre varchar(50) not null,
+	apellido varchar(50) not null,
+	adultos int default(1),
+	ninios int default(0),
+	llegada date not null,
+	salida date not null,
+	noches int not null,
+	total money not null,
+	estado varchar(50),
+	idHabitacion_FK int,
+	CONSTRAINT FK_Reservacion FOREIGN KEY (idHabitacion_FK) REFERENCES tbHabitacion(idHabitacion),
+)
+
+CREATE TABLE tbHorario(
+	idHorario int primary key identity(1, 1),
+	llegada date not null,
+	salida date not null,
+	noches int not null,
+	estado varchar(50) not null,
+	total money not null,
+	idHabitacion_FK int,
+	CONSTRAINT FK_Habitacion FOREIGN KEY (idHabitacion_FK) REFERENCES tbHabitacion(idHabitacion), 
+)
+
+CREATE TABLE tbUsuario(
+	idUsuario int primary key identity(1, 1),
+	nombre varchar(50) not null,
+	apellido varchar(50) not null,
+	cargo varchar(20) not null default('Trabajador'),
+	direccion varchar(120) not null,
+	telefono bigint not null,
+	usuario varchar(20) not null unique,
+	password varchar(120) not null
+)
+
+
+INSERT INTO tbUsuario (nombre, apellido, cargo, direccion, telefono, usuario, password) 
+	VALUES ('mario', 'perez', 'Administrador', 'Avenida del ejemplo', 565656565, 'mario1234', 'P2+4Nn7DFu4=');
+/* password: 123456 */
+
+
+select * from tbUsuario WHERE usuario = 'admin123' and password = 'P2+4Nn7DFu4=';
+/* password: 123456 */
