@@ -141,12 +141,12 @@ public class Reservacion extends javax.swing.JFrame {
 
         lblTamanio.setFont(new java.awt.Font("Ubuntu weight=255", 0, 18)); // NOI18N
         lblTamanio.setForeground(new java.awt.Color(1, 1, 1));
-        lblTamanio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ruler-regular-36.png"))); // NOI18N
+        lblTamanio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/ruler-regular-36 (1).png"))); // NOI18N
         lblTamanio.setText("517 ft² / 48 m²");
 
         lblPersonas.setFont(new java.awt.Font("Ubuntu weight=255", 0, 18)); // NOI18N
         lblPersonas.setForeground(new java.awt.Color(1, 1, 1));
-        lblPersonas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/user-regular-36.png"))); // NOI18N
+        lblPersonas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/user-regular-36 (2).png"))); // NOI18N
         lblPersonas.setText("4 Personas");
 
         txtDescripcion.setEditable(false);
@@ -159,7 +159,7 @@ public class Reservacion extends javax.swing.JFrame {
 
         lblPrecio.setFont(new java.awt.Font("Ubuntu weight=255", 0, 36)); // NOI18N
         lblPrecio.setForeground(new java.awt.Color(1, 1, 1));
-        lblPrecio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/dollar-regular-36.png"))); // NOI18N
+        lblPrecio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/dollar-regular-36 (1).png"))); // NOI18N
         lblPrecio.setText("1,400");
 
         lblTitulo.setFont(new java.awt.Font("Ubuntu weight=255", 0, 36)); // NOI18N
@@ -168,7 +168,7 @@ public class Reservacion extends javax.swing.JFrame {
 
         lblCama.setFont(new java.awt.Font("Ubuntu weight=255", 0, 18)); // NOI18N
         lblCama.setForeground(new java.awt.Color(1, 1, 1));
-        lblCama.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/bed-regular-36.png"))); // NOI18N
+        lblCama.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/bed-regular-36 (3).png"))); // NOI18N
         lblCama.setText("1 Cama King");
 
         jLabel14.setFont(new java.awt.Font("Ubuntu weight=255", 0, 10)); // NOI18N
@@ -237,7 +237,7 @@ public class Reservacion extends javax.swing.JFrame {
 
         lblTotal.setFont(new java.awt.Font("Ubuntu weight=255", 0, 36)); // NOI18N
         lblTotal.setForeground(new java.awt.Color(1, 1, 1));
-        lblTotal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/dollar-regular-36.png"))); // NOI18N
+        lblTotal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/dollar-regular-36 (1).png"))); // NOI18N
 
         lblNoches.setFont(new java.awt.Font("Ubuntu weight=255", 0, 24)); // NOI18N
         lblNoches.setForeground(new java.awt.Color(1, 1, 1));
@@ -252,12 +252,12 @@ public class Reservacion extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Ubuntu weight=255", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(1, 1, 1));
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/log-in-regular-36.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/log-in-regular-36 (2).png"))); // NOI18N
         jLabel4.setText("Check in: 14:00");
 
         jLabel17.setFont(new java.awt.Font("Ubuntu weight=255", 0, 18)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(1, 1, 1));
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/log-out-regular-36.png"))); // NOI18N
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/log-out-regular-36 (2).png"))); // NOI18N
         jLabel17.setText("Check out: 12:00");
 
         jLabel20.setFont(new java.awt.Font("Ubuntu weight=255", 0, 18)); // NOI18N
@@ -318,10 +318,10 @@ public class Reservacion extends javax.swing.JFrame {
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(lblTotal))))
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                    .addContainerGap(477, Short.MAX_VALUE)
+                    .addContainerGap(613, Short.MAX_VALUE)
                     .addComponent(jLabel20)
                     .addGap(387, 387, 387)))
         );

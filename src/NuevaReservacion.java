@@ -107,9 +107,9 @@ public class NuevaReservacion extends javax.swing.JInternalFrame {
         jLabel11.setFont(new java.awt.Font("Ubuntu weight=255", 0, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(1, 1, 1));
 
-        btnVerificar.setFont(new java.awt.Font("Ubuntu weight=255", 0, 14)); // NOI18N
         btnVerificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/check-regular-36.png"))); // NOI18N
         btnVerificar.setText("Verificar disponibilidad");
+        btnVerificar.setFont(new java.awt.Font("Ubuntu weight=255", 0, 14)); // NOI18N
         btnVerificar.setPreferredSize(new java.awt.Dimension(180, 60));
         btnVerificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,12 +123,12 @@ public class NuevaReservacion extends javax.swing.JInternalFrame {
 
         cmbHabitaciones.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Deluxe Room A", "Deluxe Room B", "Deluxe Room C", "Executive Suite", "Master Suite", "Presidential Suite" }));
 
-        lblTotal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/dollar-regular-36.png"))); // NOI18N
+        lblTotal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/dollar-regular-36 (1).png"))); // NOI18N
         lblTotal.setText("7,000");
         lblTotal.setFont(new java.awt.Font("Ubuntu weight=255", 0, 36)); // NOI18N
         lblTotal.setForeground(new java.awt.Color(1, 1, 1));
 
-        lblSubtotal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/dollar-regular-36.png"))); // NOI18N
+        lblSubtotal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/dollar-regular-36 (1).png"))); // NOI18N
         lblSubtotal.setText("1,400");
         lblSubtotal.setFont(new java.awt.Font("Ubuntu weight=255", 0, 36)); // NOI18N
         lblSubtotal.setForeground(new java.awt.Color(1, 1, 1));
@@ -161,14 +161,14 @@ public class NuevaReservacion extends javax.swing.JInternalFrame {
             }
         });
 
+        lblPrecio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/dollar-regular-36 (1).png"))); // NOI18N
+        lblPrecio.setText("1,400");
         lblPrecio.setFont(new java.awt.Font("Ubuntu weight=255", 0, 36)); // NOI18N
         lblPrecio.setForeground(new java.awt.Color(1, 1, 1));
-        lblPrecio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/dollar-regular-36.png"))); // NOI18N
-        lblPrecio.setText("1,400");
 
+        jLabel19.setText("precio");
         jLabel19.setFont(new java.awt.Font("Ubuntu weight=255", 0, 24)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(1, 1, 1));
-        jLabel19.setText("precio");
 
         javax.swing.GroupLayout panelHabitacionLayout = new javax.swing.GroupLayout(panelHabitacion);
         panelHabitacion.setLayout(panelHabitacionLayout);
