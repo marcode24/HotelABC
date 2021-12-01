@@ -7,7 +7,7 @@ public class conexion {
     // aqui ponen sus respectivo datos de su conexion
     private String database = "HotelABC";
     private String user = "SA";
-    private String password = "m24082001$";
+    private String password = "";
     public Connection conectar() {
         String conexionURL = "jdbc:sqlserver://localhost:1433;"
                 + "database="+ this.database +";" 
