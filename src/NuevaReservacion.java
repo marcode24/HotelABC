@@ -334,7 +334,7 @@ public class NuevaReservacion extends javax.swing.JInternalFrame {
                     }
                 }
             }
-            if(habitaciones.size() > 1) {
+            if(habitaciones.size() > 0) {
                 noches = validacion.obtenerNoches();
                 panelHabitacion.setVisible(true);
                 cargarHabitaciones();
@@ -358,7 +358,8 @@ public class NuevaReservacion extends javax.swing.JInternalFrame {
         // agregar el total ""pendiente""
         
         HorarioController horarioC = new HorarioController();
-        if(horarioC.crearHorarioHabitacion(nHorario)) {
+        HabitacionController habitacionC = new HabitacionController();
+        if(horarioC.crearHorarioHabitacion(nHorario) && habitacionC.cambiarDisponibilidad(idHabitacion)) {
             resetearCampos();
             JOptionPane.showMessageDialog(null, "Habitación reservada, disfrute su estancia", "Success", JOptionPane.INFORMATION_MESSAGE);
         } else {

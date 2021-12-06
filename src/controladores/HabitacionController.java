@@ -74,6 +74,7 @@ public class HabitacionController {
                 habitacion.setNumeroHabitacion(rs.getInt("numeroHabitacion"));
                 habitacion.setImagen(rs.getBytes("foto"));
                 habitacion.setIdHabitacion(rs.getInt("idHabitacion"));
+                habitacion.setDisponible(rs.getInt("disponible"));
                 list.add(habitacion);
             }
         } catch (Exception e) {
@@ -163,6 +164,26 @@ public class HabitacionController {
             pst.setInt(6, habitacion.getTamanioHabitacion());
             pst.setString(7, habitacion.getDescripcion());
             pst.setInt(8, habitacion.getIdHabitacion());
+            return (pst.executeUpdate() > 0) ? true : false;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return false;
+        } finally {
+            try {
+                cmd.close();
+                cn.close();   
+            } catch(Exception e){
+                System.out.println(e.getMessage());
+            }
+        } 
+    }
+    
+    public boolean cambiarDisponibilidad(int idHabitacion) {
+         try {
+            String sqlQuery = "UPDATE "+ tableName +" SET disponible = ? WHERE idHabitacion = ? ;";
+            PreparedStatement pst = cn.prepareStatement(sqlQuery);
+            pst.setInt(1, 0);
+            pst.setInt(2, idHabitacion);
             return (pst.executeUpdate() > 0) ? true : false;
         } catch (Exception e) {
             System.out.println(e.getMessage());

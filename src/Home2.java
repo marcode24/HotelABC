@@ -2,7 +2,7 @@
 import java.awt.Dimension;
 
 public class Home2 extends javax.swing.JFrame {
-
+    HabitacionesGrafico hg = new HabitacionesGrafico();
     public Home2() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -10,6 +10,17 @@ public class Home2 extends javax.swing.JFrame {
         boolean visible = login.role.equals("Administrador");
         jMenuUsuarios.setVisible(visible);
         jMenuHabitaciones.setVisible(visible);
+        mostrarOcupabilidad();
+    }
+    
+    private void mostrarOcupabilidad() {
+        hg.repaint();
+        Dimension desktopSize = Escritorio.getSize();
+        Dimension IJFReservaciones = hg.getSize();
+        hg.setLocation(calcularX(desktopSize, IJFReservaciones), calcularY(desktopSize, IJFReservaciones));
+        Escritorio.removeAll();
+        Escritorio.add(hg);
+        hg.show();
     }
     
     public int calcularX(Dimension desktopSize, Dimension jIFrameSize) {
@@ -39,6 +50,7 @@ public class Home2 extends javax.swing.JFrame {
         mItemUsuarios = new javax.swing.JMenuItem();
         jMenuHabitaciones = new javax.swing.JMenu();
         mItemHabitaciones = new javax.swing.JMenuItem();
+        jMOcupabilidad = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Home");
@@ -108,6 +120,15 @@ public class Home2 extends javax.swing.JFrame {
         });
         jMenuHabitaciones.add(mItemHabitaciones);
 
+        jMOcupabilidad.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/book-content-regular-36 (1).png"))); // NOI18N
+        jMOcupabilidad.setText("Ocupabilidad");
+        jMOcupabilidad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMOcupabilidadActionPerformed(evt);
+            }
+        });
+        jMenuHabitaciones.add(jMOcupabilidad);
+
         jMenuBar1.add(jMenuHabitaciones);
 
         setJMenuBar(jMenuBar1);
@@ -128,6 +149,7 @@ public class Home2 extends javax.swing.JFrame {
 
     private void mItemReservacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mItemReservacionesActionPerformed
         // TODO add your handling code here:
+        Escritorio.removeAll();
         Reservaciones reservaciones = new Reservaciones();
         Dimension desktopSize = Escritorio.getSize();
         Dimension IJFReservaciones = reservaciones.getSize();
@@ -137,6 +159,7 @@ public class Home2 extends javax.swing.JFrame {
     }//GEN-LAST:event_mItemReservacionesActionPerformed
 
     private void mItemHabitacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mItemHabitacionesActionPerformed
+        Escritorio.removeAll();
         Habitaciones habitaciones = new Habitaciones();
         Dimension desktopSize = Escritorio.getSize();
         Dimension IJFrameHabitaciones = habitaciones.getSize();
@@ -146,12 +169,14 @@ public class Home2 extends javax.swing.JFrame {
     }//GEN-LAST:event_mItemHabitacionesActionPerformed
 
     private void mItemLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mItemLogOutActionPerformed
+        Escritorio.removeAll();
         Login login = new Login();
         login.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_mItemLogOutActionPerformed
 
     private void mItemNewReservacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mItemNewReservacionActionPerformed
+        Escritorio.removeAll();
         NuevaReservacion nReservacion = new NuevaReservacion();
         Dimension desktopSize = Escritorio.getSize();
         Dimension IJFrameNReservacion = nReservacion.getSize();
@@ -161,6 +186,7 @@ public class Home2 extends javax.swing.JFrame {
     }//GEN-LAST:event_mItemNewReservacionActionPerformed
 
     private void mItemUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mItemUsuariosActionPerformed
+        Escritorio.removeAll();
         Usuarios usuarios = new Usuarios();
         Dimension desktopSize = Escritorio.getSize();
         Dimension IJFrameUsuarios = usuarios.getSize();
@@ -168,6 +194,10 @@ public class Home2 extends javax.swing.JFrame {
         Escritorio.add(usuarios);
         usuarios.show();
     }//GEN-LAST:event_mItemUsuariosActionPerformed
+
+    private void jMOcupabilidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMOcupabilidadActionPerformed
+        mostrarOcupabilidad();
+    }//GEN-LAST:event_jMOcupabilidadActionPerformed
 
     /**
      * @param args the command line arguments
@@ -206,6 +236,7 @@ public class Home2 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane Escritorio;
+    private javax.swing.JMenuItem jMOcupabilidad;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;

@@ -123,7 +123,6 @@ public class Reservacion extends javax.swing.JFrame {
         setBackground(new java.awt.Color(0, 186, 230));
         setMaximumSize(new java.awt.Dimension(1200, 800));
         setMinimumSize(new java.awt.Dimension(1200, 800));
-        setPreferredSize(new java.awt.Dimension(1200, 800));
         setResizable(false);
 
         jPanel2.setBackground(new java.awt.Color(0, 186, 230));

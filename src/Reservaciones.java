@@ -235,7 +235,8 @@ public class Reservaciones extends javax.swing.JInternalFrame {
             if(respuesta == 0) {
                 HorarioController horarioC = new HorarioController();
                 ReservacionController reservacionC = new ReservacionController();
-                if(horarioC.crearHorarioHabitacion(nuevoH) && reservacionC.cambiarEstadoReservacion("Confirmado", idReservacion)) {
+                HabitacionController habitacionC = new HabitacionController();
+                if(horarioC.crearHorarioHabitacion(nuevoH) && reservacionC.cambiarEstadoReservacion("Confirmado", idReservacion) && habitacionC.cambiarDisponibilidad(nuevoH.getIdHabitacion())) {
                     JOptionPane.showMessageDialog(null, "Disfrute su estancia", "Success", JOptionPane.INFORMATION_MESSAGE);
                     obtenerDatos(false, "");
                 } else {
